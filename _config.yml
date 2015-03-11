@@ -1,8 +1,15 @@
-# Site settings
+# Site settings.
 title: Roastero
 email: admin@roastero.com
 description: > # this means to ignore newlines until "baseurl:"
     Roastero is an open-source application that increases the functionality
-    of the USB powered FreshRoast SR700 coffee roaster.
-# Build settings
+    of the USB controlled FreshRoast SR700 coffee roaster.
+
+# Site links.
+github: 'https://github.com/roastero'
+twitter: 'https://twitter.com/roastero'
+facebook: 'https://www.facebook.com/roastero'
+contributors: 'https://github.com/orgs/Roastero/people'
+
+# Build settings.
 markdown: kramdown
