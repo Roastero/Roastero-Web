@@ -1,36 +1,44 @@
 <div id="contributors"></div>
-
 <script>
-  $(function(){
-    var apiurl = 'https://api.github.com/repos/tldrcode/tldrcode.com/contributors';
-    var outhtml = "";
-    requestJSON(apiurl, function(json)
-  {
-    var contributors = json;
-    var counter = 0;
-    outhtml = outhtml + '<div class="row">'
-    $.each(contributors, function(index) {
-      if(counter % 4 == 0 && counter != 0){
-        outhtml = outhtml + '</div>'
-        outhtml = outhtml + '<div class="row">'
-      }
-      outhtml = outhtml + '<div class="col s3 center-align">';
-      outhtml = outhtml + '<a href="'+encodeURI(contributors[index].html_url)+'"><img src="'+encodeURI(contributors[index].avatar_url)+'" alt="user avatar" class="circle responsive-img"></a>';
-      outhtml = outhtml + '<h5><a href="'+encodeURI(contributors[index].html_url)+'">'+encodeURI(contributors[index].login)+'</a></h5>';
-      outhtml = outhtml + '<p>Contributions: '+encodeURI(contributors[index].contributions)+'</p>';
-      outhtml = outhtml + '</div>';
-      counter++;
+    $(function(){
+        var apiurl = 'https://api.github.com/repos/roastero/roastero/contributors';
+        var outhtml = "";
+        requestJSON(apiurl, function(json){
+            var contributors = json;
+            var counter = 0;
+            outhtml = outhtml + '<div class="row">'
+            $.each(contributors, function(index) {
+                if(counter % 2 == 0 && counter != 0){
+                    outhtml = outhtml + '</div>'
+                    outhtml = outhtml + '<div class="row">'
+                }
+                outhtml = outhtml + '<div class="col s6">';
+                outhtml = outhtml + '<div class="card-panel grey lighten-5 z-depth-1">';
+                outhtml = outhtml + '<div class="row">';
+                outhtml = outhtml + '<div class="col s3">';
+                outhtml = outhtml + '<img src="'+encodeURI(contributors[index].avatar_url)+'" alt="user avatar" class="circle responsive-img">';
+                outhtml = outhtml + '</div>';
+                outhtml = outhtml + '<div class="col s9">';
+                outhtml = outhtml + '<span class="black-text">';
+                outhtml = outhtml + '<h5><a href="'+encodeURI(contributors[index].html_url)+'">'+encodeURI(contributors[index].login)+'</a></h5>';
+                outhtml = outhtml + 'Contributions: '+encodeURI(contributors[index].contributions)+'';
+                outhtml = outhtml + '</span>';
+                outhtml = outhtml + '</div>';
+                outhtml = outhtml + '</div>';
+                outhtml = outhtml + '</div>';
+                outhtml = outhtml + '</div>';
+                counter++;
+            });
+            outhtml = outhtml + '</div>';
+            $('#contributors').html(outhtml);
+        });
+        function requestJSON(url, callback) {
+            $.ajax({
+                url: url,
+                complete: function(xhr) {
+                    callback.call(null, xhr.responseJSON);
+                }
+            });
+        }
     });
-    outhtml = outhtml + '</div>';
-    $('#contributors').html(outhtml);
-  });
-  function requestJSON(url, callback) {
-    $.ajax({
-      url: url,
-      complete: function(xhr) {
-        callback.call(null, xhr.responseJSON);
-      }
-    });
-  }
-  });
 </script>
