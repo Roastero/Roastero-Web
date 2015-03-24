@@ -1,0 +1,42 @@
+// Typography
+@include font-face("asap", "fonts/asap/asap-regular", $file-formats: ttf);
+@include font-face("asap", "fonts/asap/asap-bold", bold, $file-formats: ttf);
+@include font-face("asap", "fonts/asap/asap-italic", normal, italic, $file-formats: ttf);
+$base-font-family: "asap";
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 5px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$white: #fff;
+$blue: #2aa1d3;
+$green: #8ab71b;
+$red: #ee4e10;
+$yellow: #f0b017;
+$dark-gray: #23252b;
+$medium-gray: #2e3138;
+$light-gray: #444953;
+
+// Font Colors
+$base-background-color: $white;
+$base-font-color: $white;
+$action-color: $blue;
+
+// Border
+$base-border-color: $dark-gray;
+$base-border: 2px solid $base-border-color;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);

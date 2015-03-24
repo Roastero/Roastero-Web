@@ -1,0 +1,120 @@
+---
+# This is required for Jekyll to render the css files
+---
+
+@import "bourbon/bourbon";
+@import "base/base";
+@import "neat/neat";
+
+.container {
+    @include outer-container;   
+}
+
+.actions {
+    a {
+        color: $white;;
+        background-color: $green;
+        border-radius: $base-border-radius;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        font-family: $base-font-family;
+        font-size: $base-font-size;
+        font-weight: bold;
+        line-height: 1;
+        padding: .6em 2.5em .6em 2.5em;
+        text-decoration: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        text-align: center;
+
+        &:hover,
+        &:focus {
+            background-color: darken($green, 10%);
+            color: $white;
+        }
+    }
+}
+
+.navbar {
+    @include outer-container;
+    background-color: $light-gray;
+    border-radius: $base-border-radius; 
+    margin-top: 2em; 
+    padding: .6em;
+
+    ul {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li { 
+        display: inline-block;
+
+        a {
+            color: darken($white, 15%);
+            background-color: $light-gray;
+            border-radius: $base-border-radius;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            font-family: $base-font-family;
+            font-size: $base-font-size;
+            font-weight: bold;
+            line-height: 1;
+            padding: .8em .8em;
+            text-decoration: none;
+            vertical-align: middle;
+            white-space: nowrap;
+
+            &:active {
+                color: $light-gray;
+                background-color: $dark-gray;
+            }
+
+            &:hover {
+                color: $white;
+            }
+
+            &:focus {
+                color: $light-gray;
+            }
+        }
+    }
+
+    .logo {
+        font-size: 2em;
+        font-weight: bold;
+        vertical-align: middle;
+        padding: .4em .4em;
+
+        a {
+            color: $white;
+        }
+    }
+
+}
+
+.site-footer {
+    background-color: $dark-gray;
+    width: 100%;
+    padding: 1em;
+    
+    .about {
+        @include span-columns(6);
+    }
+
+    .docs {
+        @include span-columns(3);
+    }
+
+    .contact {
+        @include span-columns(3);
+    }
+    
+    .team {
+        text-align: center;
+    }
+}
