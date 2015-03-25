@@ -261,6 +261,7 @@
     }
 }
 
+// Contributors Page.
 .cont-code {
     @include span-columns(6);
 }
@@ -269,3 +270,65 @@
     @include span-columns(6);
     @include omega();
 }
+
+.round-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    border: 4px solid $dark-gray;
+}
+
+.top-cont {
+    @include span-columns(12);
+    @include omega();
+    margin-bottom: 1em;
+}
+
+#contributors {
+    li {
+        @include span-columns(3);
+        @include omega(4n);
+        margin-bottom: 1em;
+    }
+}
+
+.user-card {
+    background-color: $light-gray;
+    border-radius: $base-border-radius;
+
+    h3 { 
+        text-transform: none;
+        margin-top: .5em;
+
+        a {
+            color: $white;
+            cursor: pointer;
+            &:active,
+            &:hover,
+            &:focus {
+                color: darken($white, 15%);
+            }
+        }
+    }
+
+    h6 {
+        text-transform: none;
+        margin: 0;
+    }
+
+    .user-card-top {
+        text-align: center;
+        vertical-align: middle;
+        padding: 1em;
+    }
+
+    .user-card-bottom {
+        @include border-bottom-radius($base-border-radius);
+        background-color: $dark-gray;
+        padding: 1em;
+        border-top: 4px solid $blue;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
