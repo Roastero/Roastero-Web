@@ -10,37 +10,69 @@
     @include outer-container;   
 }
 
-.actions {
-    a {
-        color: $white;;
-        background-color: $green;
-        border-radius: $base-border-radius;
-        border: none;
-        cursor: pointer;
-        display: inline-block;
-        font-family: $base-font-family;
-        font-size: $base-font-size;
-        font-weight: bold;
-        line-height: 1;
-        padding: .6em 2.5em .6em 2.5em;
-        text-decoration: none;
-        vertical-align: middle;
-        white-space: nowrap;
-        text-align: center;
+.content-wrapper {
+    @include outer-container;   
+    padding-bottom: 2em;
+}
 
-        &:hover,
-        &:focus {
-            background-color: darken($green, 10%);
-            color: $white;
+.actions {
+    ul {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li { 
+        display: inline-block;
+        margin-right: 1em;
+        margin-top: .5em;
+
+        a {
+            color: $white;;
+            background-color: $green;
+            border-radius: $base-border-radius;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            font-family: $base-font-family;
+            font-size: $base-font-size;
+            font-weight: bold;
+            line-height: 1;
+            padding: .6em 2.5em .6em 2.5em;
+            text-decoration: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-align: center;
+            text-transform: uppercase;
+            display: inline;
+
+            &:hover,
+            &:focus {
+                background-color: darken($green, 10%);
+                color: $white;
+            }
         }
     }
+}
+
+.header-wrapper-home {
+    background-image: url(images/main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    padding-bottom: 30em;
+    padding-top: 2em;
+}
+
+.header-wrapper-page {
+    margin-top: 2em;
 }
 
 .navbar {
     @include outer-container;
     background-color: $light-gray;
     border-radius: $base-border-radius; 
-    margin-top: 2em; 
     padding: .6em;
 
     ul {
@@ -68,6 +100,7 @@
             text-decoration: none;
             vertical-align: middle;
             white-space: nowrap;
+            text-transform: uppercase;
 
             &:active {
                 color: $light-gray;
@@ -96,6 +129,24 @@
     }
 
 }
+
+.home-right {
+    @include span-columns(8);
+
+    .what-is {
+        @include span-columns(8 of 8);
+    }
+
+    .where-to-buy {
+        @include span-columns(8 of 8);
+    }
+}
+
+.screenshots {
+    @include span-columns(4);
+    @include omega();
+}
+
 
 .site-footer {
     background-color: $dark-gray;
@@ -129,6 +180,7 @@
             vertical-align: middle;
             white-space: nowrap;
             text-align: center;
+            text-transform: uppercase;
 
             &:hover,
             &:focus {
