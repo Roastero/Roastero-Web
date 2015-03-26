@@ -174,18 +174,30 @@
 
 .home-right {
     @include span-columns(8);
+    @include media($mobile) {
+        @include span-columns(4);
+    }
 
     .what-is {
         @include span-columns(8 of 8);
+        @include media($mobile) {
+            @include span-columns(4);
+        }
     }
 
     .where-to-buy {
         @include span-columns(8 of 8);
+        @include media($mobile) {
+            @include span-columns(4);
+        }
     }
 }
 
 .screenshots {
     @include span-columns(4);
+    @include media($mobile) {
+        @include span-columns(4);
+    }
     @include omega();
 }
 
@@ -206,6 +218,9 @@
     
     .about {
         @include span-columns(6);
+        @include media($mobile) {
+            @include span-columns(4);
+        }
         a {
             color: $white;;
             background-color: $blue;
@@ -234,15 +249,24 @@
 
     .docs {
         @include span-columns(3);
+        @include media($mobile) {
+            @include span-columns(4);
+        }
     }
 
     .contact {
         @include span-columns(3);
         @include omega();
+        @include media($mobile) {
+            @include span-columns(4);
+        }
     }
     
     .team {
         @include span-columns(12);
+        @include media($mobile) {
+            @include span-columns(4);
+        }
         @include omega();
         color: $light-gray;
         text-align: center;
@@ -265,11 +289,17 @@
 // Contributors Page.
 .cont-code {
     @include span-columns(6);
+    @include media($mobile) {
+        @include span-columns(4);
+    }
 }
 
 .cont-fin {
     @include span-columns(6);
     @include omega();
+    @include media($mobile) {
+        @include span-columns(4);
+    }
 }
 
 .round-image {
@@ -282,6 +312,9 @@
 .top-cont {
     @include span-columns(12);
     @include omega();
+    @include media($mobile) {
+        @include span-columns(4);
+    }
     margin-bottom: 1em;
 }
 
@@ -289,6 +322,9 @@
     li {
         @include span-columns(3);
         @include omega(4n);
+        @include media($mobile) {
+            @include span-columns(4);
+        }
         margin-bottom: 1em;
     }
 }
@@ -336,6 +372,9 @@
 // Documentation Page
 .left-nav {
     @include span-columns(3);
+    @include media($mobile) {
+        @include span-columns(4);
+    }
     margin-top: 1em;
     
     ul {
@@ -345,24 +384,27 @@
                 display: inline-block;
                 padding: 1em;
                 width: 100%;
-                border-bottom: $base-border;
+                border-top: 1px solid darken($light-gray, 5%);
                 color: $white;
                 cursor: pointer;
-                &:active {
-                    border-bottom: 2px solid $green;
-                }
+
+                &:active,
                 &:hover,
                 &:focus {
                     color: darken($white, 15%);
                 }
             }
 
-            .first-item {
-                @include border-top-radius($base-border-radius);
+            &:first-child {
+                a {
+                    @include border-top-radius($base-border-radius);
+                }
             }
 
-            .last-item {
-                @include border-bottom-radius($base-border-radius);
+            &:last-child {
+                a {
+                    @include border-bottom-radius($base-border-radius);
+                }
             }
 
             ul {
@@ -372,13 +414,27 @@
                         display: inline-block;
                         padding: 1em;
                         width: 100%;
-                        border-bottom: $base-border;
+                        border-top: 1px solid darken($dark-gray, 5%);
                         color: $white;
                         cursor: pointer;
                         &:active,
                         &:hover,
                         &:focus {
                             color: darken($white, 15%);
+                        }
+                    }
+
+                    &:first-child {
+                        a {
+                            @include border-top-radius(0px);
+                            border-top: 2px solid $green;
+                        }
+                    }
+
+                    &:last-child {
+                        a {
+                            @include border-bottom-radius(0px);
+                            border-radius: none;
                         }
                     }
                 }
@@ -389,6 +445,9 @@
 
 .right-content {
     @include span-columns(9);
+    @include media($mobile) {
+        @include span-columns(4);
+    }
     @include omega();
 }
 
