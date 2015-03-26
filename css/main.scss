@@ -99,12 +99,12 @@
 }
 
 .header-wrapper-home {
-    background-image: url(images/main.jpg);
+    background-image: url(images/main.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; 
-    padding-bottom: 30em;
-    padding-top: 2em;
+    padding-bottom: 480px;
+    padding-top: 32px;
 }
 
 .header-wrapper-page {
@@ -164,6 +164,7 @@
         font-weight: bold;
         vertical-align: middle;
         padding: .4em .4em;
+        text-transform: uppercase;
 
         a {
             color: $white;
