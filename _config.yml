@@ -16,3 +16,5 @@ team: 'https://github.com/orgs/Roastero/people'
 
 # Build settings
 markdown: kramdown
+
+highlighter: pygments

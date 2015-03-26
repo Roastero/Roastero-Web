@@ -5,6 +5,7 @@
 @import "bourbon/bourbon";
 @import "base/base";
 @import "neat/neat";
+@import "syntax-highlighting";
 
 .container {
     @include outer-container;   
@@ -330,5 +331,64 @@
         text-align: center;
         vertical-align: middle;
     }
+}
+
+// Documentation Page
+.left-nav {
+    @include span-columns(3);
+    margin-top: 1em;
+    
+    ul {
+        li {
+            a {
+                background-color: $light-gray;
+                display: inline-block;
+                padding: 1em;
+                width: 100%;
+                border-bottom: $base-border;
+                color: $white;
+                cursor: pointer;
+                &:active {
+                    border-bottom: 2px solid $green;
+                }
+                &:hover,
+                &:focus {
+                    color: darken($white, 15%);
+                }
+            }
+
+            .first-item {
+                @include border-top-radius($base-border-radius);
+            }
+
+            .last-item {
+                @include border-bottom-radius($base-border-radius);
+            }
+
+            ul {
+                li {
+                    a {
+                        background-color: $dark-gray;
+                        display: inline-block;
+                        padding: 1em;
+                        width: 100%;
+                        border-bottom: $base-border;
+                        color: $white;
+                        cursor: pointer;
+                        &:active,
+                        &:hover,
+                        &:focus {
+                            color: darken($white, 15%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.right-content {
+    @include span-columns(9);
+    @include omega();
 }
 
