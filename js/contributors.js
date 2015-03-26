@@ -1,5 +1,5 @@
 $(function(){
-    var apiurl = 'https://api.github.com/repos/tldrcode/tldrcode.com/contributors';
+    var apiurl = 'https://api.github.com/repos/roastero/roastero/contributors';
     var outhtml = "";
     requestJSON(apiurl, function(json){
         var contributors = json;
