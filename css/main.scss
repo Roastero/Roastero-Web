@@ -174,29 +174,50 @@
 }
 
 .home-right {
-    @include span-columns(8);
-    @include media($mobile) {
+    @include media($small-screen-up) {
         @include span-columns(4);
+    }
+    @include media($medium-screen-up) {
+        @include span-columns(8);
+        @include omega();
+    }
+    @include media($large-screen-up) {
+        @include span-columns(8);
     }
 
     .what-is {
-        @include span-columns(8 of 8);
-        @include media($mobile) {
+        @include media($small-screen-up) {
             @include span-columns(4);
+        }
+        @include media($medium-screen-up) {
+            @include span-columns(8);
+        }
+        @include media($large-screen-up) {
+            @include span-columns(8 of 8);
         }
     }
 
     .where-to-buy {
-        @include span-columns(8 of 8);
-        @include media($mobile) {
+        @include media($small-screen-up) {
             @include span-columns(4);
+        }
+        @include media($medium-screen-up) {
+            @include span-columns(8);
+        }
+        @include media($large-screen-up) {
+            @include span-columns(8 of 8);
         }
     }
 }
 
 .screenshots {
-    @include span-columns(4);
-    @include media($mobile) {
+    @include media($small-screen-up) {
+        @include span-columns(4);
+    }
+    @include media($medium-screen-up) {
+        @include span-columns(8);
+    }
+    @include media($large-screen-up) {
         @include span-columns(4);
     }
     @include omega();
@@ -218,10 +239,17 @@
     }
     
     .about {
-        @include span-columns(6);
-        @include media($mobile) {
+        @include media($small-screen-up) {
             @include span-columns(4);
         }
+        @include media($medium-screen-up) {
+            @include span-columns(8);
+            @include omega();
+        }
+        @include media($large-screen-up) {
+            @include span-columns(6);
+        }
+
         a {
             color: $white;;
             background-color: $blue;
@@ -249,26 +277,42 @@
     }
 
     .docs {
-        @include span-columns(3);
-        @include media($mobile) {
+        @include media($small-screen-up) {
             @include span-columns(4);
+        }
+        @include media($medium-screen-up) {
+            @include span-columns(4);
+        }
+        @include media($large-screen-up) {
+            @include span-columns(3);
         }
     }
 
     .contact {
-        @include span-columns(3);
-        @include omega();
-        @include media($mobile) {
+        @include media($small-screen-up) {
             @include span-columns(4);
+        }
+        @include media($medium-screen-up) {
+            @include span-columns(4);
+            @include omega();
+        }
+        @include media($large-screen-up) {
+            @include span-columns(3);
+            @include omega();
         }
     }
     
     .team {
-        @include span-columns(12);
-        @include media($mobile) {
+        @include media($small-screen-up) {
             @include span-columns(4);
         }
-        @include omega();
+        @include media($medium-screen-up) {
+            @include span-columns(8);
+        }
+        @include media($large-screen-up) {
+            @include span-columns(12);
+            @include omega();
+        }
         color: $light-gray;
         text-align: center;
         border-top: $base-border;
@@ -289,17 +333,27 @@
 
 // Contributors Page.
 .cont-code {
-    @include span-columns(6);
-    @include media($mobile) {
+    @include media($small-screen-up) {
         @include span-columns(4);
+    }
+    @include media($medium-screen-up) {
+        @include span-columns(8);
+    }
+    @include media($large-screen-up) {
+        @include span-columns(6);
     }
 }
 
 .cont-fin {
-    @include span-columns(6);
-    @include omega();
-    @include media($mobile) {
+    @include media($small-screen-up) {
         @include span-columns(4);
+    }
+    @include media($medium-screen-up) {
+        @include span-columns(8);
+    }
+    @include media($large-screen-up) {
+        @include span-columns(6);
+        @include omega();
     }
 }
 
@@ -311,20 +365,30 @@
 }
 
 .top-cont {
-    @include span-columns(12);
-    @include omega();
-    @include media($mobile) {
+    @include media($small-screen-up) {
         @include span-columns(4);
+    }
+    @include media($medium-screen-up) {
+        @include span-columns(8);
+    }
+    @include media($large-screen-up) {
+        @include span-columns(12);
+        @include omega();
     }
     margin-bottom: 1em;
 }
 
 #contributors {
     li {
-        @include span-columns(3);
-        @include omega(4n);
-        @include media($mobile) {
+        @include media($small-screen-up) {
             @include span-columns(4);
+        }
+        @include media($medium-screen-up) {
+            @include span-columns(4);
+        }
+        @include media($large-screen-up) {
+            @include span-columns(3);
+            @include omega(4n);
         }
         margin-bottom: 1em;
     }
@@ -372,9 +436,14 @@
 
 // Documentation Page
 .left-nav {
-    @include span-columns(3);
-    @include media($mobile) {
+    @include media($small-screen-up) {
         @include span-columns(4);
+    }
+    @include media($medium-screen-up) {
+        @include span-columns(8);
+    }
+    @include media($large-screen-up) {
+        @include span-columns(3);
     }
     margin-top: 1em;
     
@@ -445,10 +514,15 @@
 }
 
 .right-content {
-    @include span-columns(9);
-    @include media($mobile) {
+    @include media($small-screen-up) {
         @include span-columns(4);
     }
-    @include omega();
+    @include media($medium-screen-up) {
+        @include span-columns(8);
+    }
+    @include media($large-screen-up) {
+        @include span-columns(9);
+        @include omega();
+    }
 }
 
