@@ -99,10 +99,7 @@
 }
 
 .header-wrapper-home {
-    background-image: url(images/main.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; 
+    @include background(url("/images/main-image.png") center 92% no-repeat, linear-gradient(to bottom, rgb(179, 182, 187) 0%, rgb(230, 233, 238) 100%));
     padding-bottom: 480px;
     padding-top: 32px;
 }
