@@ -3,8 +3,9 @@
 ---
 
 @import "bourbon/bourbon";
-@import "base/base";
+@import "base/grid-settings";
 @import "neat/neat";
+@import "base/base";
 @import "syntax-highlighting";
 
 .container {
@@ -26,8 +27,7 @@
 
     li { 
         display: inline-block;
-        margin-right: 1em;
-        margin-top: .5em;
+        padding: 1em 1em 1em 0em;
 
         a {
             color: $white;;
@@ -67,8 +67,7 @@
 
     li { 
         display: inline-block;
-        margin-right: 1em;
-        margin-top: .5em;
+        padding: 1em 1em 1em 0em;
 
         a {
             color: $white;;
