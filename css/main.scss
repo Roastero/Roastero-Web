@@ -14,7 +14,7 @@
 
 .content-wrapper {
     @include outer-container;   
-    padding-bottom: 2em;
+    padding: 1em 1em 2em 1em;
 }
 
 .actions {
@@ -111,6 +111,8 @@
         @include background(url("/images/main-image.png") center 92% no-repeat, linear-gradient(to bottom, rgb(179, 182, 187) 0%, rgb(230, 233, 238) 100%));
         padding-bottom: 480px;
         padding-top: 32px;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
 
@@ -267,6 +269,7 @@
     background-color: $dark-gray;
     width: 100%;
     padding: 1em;
+
     a {
         color: darken($white, 15%);
         cursor: pointer;
