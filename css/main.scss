@@ -98,17 +98,16 @@
 }
 
 .header-wrapper-home {
-    @include media($small-screen-up){
+    @include media($small-screen-up) {
         @include background(url("/images/main-image.png") center 90% no-repeat, linear-gradient(to bottom, rgb(179, 182, 187) 0%, rgb(230, 233, 238) 100%));
         background-size: 300px, 100%;
         padding-bottom: 260px;
     }
-    @include media($medium-screen-up){
+    @include media($medium-screen-up) {
         @include background(url("/images/main-image.png") center 92% no-repeat, linear-gradient(to bottom, rgb(179, 182, 187) 0%, rgb(230, 233, 238) 100%));
         padding-bottom: 480px;
-        padding-top: 32px;
     }
-    @include media($large-screen-up){
+    @include media($large-screen-up) {
         @include background(url("/images/main-image.png") center 92% no-repeat, linear-gradient(to bottom, rgb(179, 182, 187) 0%, rgb(230, 233, 238) 100%));
         padding-bottom: 480px;
         padding-top: 32px;
@@ -116,55 +115,85 @@
 }
 
 .header-wrapper-page {
-    margin-top: 2em;
+    @include media($small-screen-up) {
+
+    }
+    @include media($medium-screen-up) {
+
+    }
+    @include media($large-screen-up) {
+        margin-top: 2em;
+    }
 }
 
 .navbar {
     @include outer-container;
-    background-color: $light-gray;
-    border-radius: $base-border-radius; 
-    padding: .6em;
-
-    ul {
-        display: inline;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    li { 
-        display: inline-block;
-
-        a {
-            color: darken($white, 15%);
-            background-color: $light-gray;
-            border-radius: $base-border-radius;
-            border: none;
-            cursor: pointer;
-            display: inline-block;
-            font-family: $base-font-family;
-            font-size: $base-font-size;
+    @include media($small-screen-up) {
+        height: 4em;
+        background-color: $dark-gray;
+            text-align: center;
+        
+        .logo {
+            font-size: 2em;
             font-weight: bold;
-            line-height: 1;
-            padding: .8em .8em;
-            text-decoration: none;
             vertical-align: middle;
-            white-space: nowrap;
+            padding: .4em .4em;
             text-transform: uppercase;
 
-            &:active {
-                color: $light-gray;
-                background-color: $dark-gray;
-            }
-
-            &:hover {
+            a {
                 color: $white;
             }
-
-            &:focus {
-                color: $light-gray;
-            }
         }
+    }
+    @include media($medium-screen-up) {
+
+    }
+    @include media($large-screen-up) {
+        text-align: left;
+        background-color: $light-gray;
+        border-radius: $base-border-radius; 
+        padding: .6em;
+
+        ul {
+            display: inline;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li { 
+            display: inline-block;
+
+            a {
+                color: darken($white, 15%);
+                background-color: $light-gray;
+                border-radius: $base-border-radius;
+                border: none;
+                cursor: pointer;
+                display: inline-block;
+                font-family: $base-font-family;
+                font-size: $base-font-size;
+                font-weight: bold;
+                line-height: 1;
+                padding: .8em .8em;
+                text-decoration: none;
+                vertical-align: middle;
+                white-space: nowrap;
+                text-transform: uppercase;
+
+                &:active {
+                    color: $light-gray;
+                    background-color: $dark-gray;
+                }
+
+                &:hover {
+                    color: $white;
+                }
+
+                &:focus {
+                    color: $light-gray;
+                }
+            }
     }
 
     .logo {
@@ -177,6 +206,8 @@
         a {
             color: $white;
         }
+    }
+
     }
 
 }
