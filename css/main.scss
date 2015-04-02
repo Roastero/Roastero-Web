@@ -133,18 +133,27 @@
     @include media($small-screen-up) {
         height: 4em;
         background-color: $dark-gray;
-            text-align: center;
-        
+        padding: .7em;
+
         .logo {
             font-size: 2em;
             font-weight: bold;
             vertical-align: middle;
-            padding: .4em .4em;
             text-transform: uppercase;
+            width: 100%;
+            text-align: center;
 
             a {
                 color: $white;
             }
+        }
+        
+        .threebar {
+            font-size: 1.5em;
+            background-color: $yellow;
+            padding: .2em .5em .2em .5em;
+            border-radius: $base-border-radius;
+            vertical-align: middle;
         }
     }
     @include media($medium-screen-up) {
@@ -196,20 +205,23 @@
                     color: $light-gray;
                 }
             }
-    }
-
-    .logo {
-        font-size: 2em;
-        font-weight: bold;
-        vertical-align: middle;
-        padding: .4em .4em;
-        text-transform: uppercase;
-
-        a {
-            color: $white;
         }
-    }
 
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            vertical-align: middle;
+            padding: .4em .4em;
+            text-transform: uppercase;
+
+            a {
+                color: $white;
+            }
+        }
+        
+        .threebar {
+            display: none;
+        }
     }
 
 }
