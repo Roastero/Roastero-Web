@@ -1,6 +1,8 @@
 <header>
     <nav class="navbar">
-        <span class="threebar"><i class="fa fa-bars"></i></span>
+        <span class="js-menu-trigger sliding-panel-button">
+            <i class="fa fa-bars"></i>
+        </span>
         <span class="logo"><a href="/">{{ site.title  }}</a></span>
         <ul>
             <li><a href="/">Home</a></li>
@@ -9,4 +11,16 @@
             <li><a href="/downloads">Downloads</a></li>
         </ul>
     </nav>
+
+    <nav class="js-menu sliding-panel-content">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contribute">Contribute</a></li>
+            <li><a href="/documentation">Documentation</a></li>
+            <li><a href="/downloads">Downloads</a></li>
+        </ul>
+    </nav>
+
+    <div class="js-menu-screen sliding-panel-fade-screen"></div>
+    <script src="/js/sliding-panel.js"></script>
 </header>
