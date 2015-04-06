@@ -21,7 +21,7 @@
         padding: 0 1em 1em 1em;
     }
     @include media($large-screen-up) {
-        padding: 1em 1em 2em 1em;
+        padding: 0em 0em 2em 0em;
     }
 }
 
@@ -169,11 +169,6 @@
 
         &:focus {
             background-color: $blue;
-        }
-
-        &:hover {
-            background-color: $blue;
-            color: $white;
         }
     }
 
