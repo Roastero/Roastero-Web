@@ -1,0 +1,72 @@
+.modal {
+    label {
+        cursor: pointer;
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+
+    .modal-state {
+        display: none;
+    }
+
+    .modal-fade-screen { // overlay
+        @include position(fixed, 0 0 0 0);
+        background-color: rgba(0, 0, 0, 0.85);
+        opacity: 0;
+        transition: opacity 0.25s ease;
+        visibility: hidden;
+        z-index: 99999;
+
+        @include media($large-screen-up) {
+            padding-top: 10em;
+        }
+    }
+
+    .modal-bg {
+        @include position(absolute, 0 0 0 0);
+        cursor: pointer;
+    }
+
+    .modal-close {
+        cursor: pointer;
+    }
+
+    .modal-inner {
+        background-color: #fff;
+        margin: auto;
+        max-height: 95%;
+        position: relative;
+        top: 0.5em;
+        transition: opacity 0.25s ease;
+        max-width: 95%;
+        overflow: auto;
+        padding: 0;
+
+        @include media($medium-screen-up) {
+            max-height: 70%;
+            max-width: 60%;
+        }
+
+        @include media($large-screen-up) {
+            max-width: 50%;
+        }
+
+        img {
+            width: auto;
+            max-height: 100%;
+        }
+    }
+
+    .modal-state:checked + .modal-fade-screen {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.modal-closed {
+    overflow: auto;
+}
