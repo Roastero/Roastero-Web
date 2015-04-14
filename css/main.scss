@@ -305,54 +305,21 @@
 
 }
 
-.home-right {
-    @include media($small-screen-up) {
-        @include span-columns(4);
-    }
-    @include media($medium-screen-up) {
-        @include span-columns(8);
-        @include omega();
-    }
-    @include media($large-screen-up) {
-        @include span-columns(8);
-    }
-
-    .what-is {
-        @include media($small-screen-up) {
-            @include span-columns(4);
-        }
-        @include media($medium-screen-up) {
-            @include span-columns(8);
-        }
-        @include media($large-screen-up) {
-            @include span-columns(8 of 8);
-        }
-    }
-
-    .where-to-buy {
-        @include media($small-screen-up) {
-            @include span-columns(4);
-        }
-        @include media($medium-screen-up) {
-            @include span-columns(8);
-        }
-        @include media($large-screen-up) {
-            @include span-columns(8 of 8);
-        }
-    }
-}
-
 .screenshots {
-    @include media($small-screen-up) {
-        @include span-columns(4);
+    .modal {
+        @include media($small-screen-up) {
+            @include span-columns(4);
+            @include omega();
+        }
+        @include media($medium-screen-up) {
+            @include span-columns(4);
+            @include omega();
+        }
+        @include media($large-screen-up) {
+            @include span-columns(3);
+            @include omega(5n);
+        }
     }
-    @include media($medium-screen-up) {
-        @include span-columns(8);
-    }
-    @include media($large-screen-up) {
-        @include span-columns(4);
-    }
-    @include omega();
 }
 
 
