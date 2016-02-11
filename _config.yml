@@ -9,14 +9,14 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 
 # Dynamic links.
-github: 'https://github.com/roastero/roastero'
-twitter: 'https://twitter.com/roastero'
-facebook: 'https://www.facebook.com/roastero'
+github: 'https://github.com/Roastero/Openroast'
+twitter: 'https://twitter.com/Roastero'
+facebook: 'https://www.facebook.com/Roastero'
 team: 'https://github.com/orgs/Roastero/people'
 gitter: '#'
-paypal: '#'
-bitcoin: '#'
-email: admin@roastero.com
+paypal: 'https://www.paypal.me/mspicer'
+squarecash: 'https://cash.me/$MarkSpicer'
+email: mds4680@rit.edu
 
 # Build settings
 markdown: kramdown
